@@ -4,15 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClipForge - Short-Form Video Automation</title>
+    <meta name="description" content="ClipForge turns one idea into a short-form video and publishes it to your own YouTube, Instagram and TikTok accounts, only when you tell it to.">
+    <link rel="canonical" href="https://benedict-bulitz.github.io/clipforge-site/">
+    <link rel="icon" href="favicon.ico?v=1b6115bd" sizes="16x16 32x32 48x48">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png?v=1b6115bd">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png?v=1b6115bd">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48x48.png?v=1b6115bd">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=1b6115bd">
+    <link rel="manifest" href="site.webmanifest?v=1b6115bd">
+    <meta name="theme-color" content="#0f1115">
+    <meta name="application-name" content="ClipForge">
+    <meta name="apple-mobile-web-app-title" content="ClipForge">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ClipForge">
+    <meta property="og:title" content="ClipForge - Short-Form Video Automation">
+    <meta property="og:description" content="Turn one idea into a short-form video and publish it to your own YouTube, Instagram and TikTok accounts.">
+    <meta property="og:url" content="https://benedict-bulitz.github.io/clipforge-site/">
+    <meta property="og:image" content="https://benedict-bulitz.github.io/clipforge-site/assets/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The ClipForge app icon">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header>
         <div class="container">
-            <nav>
-                <a href="index.html" class="brand">ClipForge</a>
+            <nav aria-label="Main">
+                <a href="index.html" class="brand"><img src="assets/icons/icon-192.png" alt="" width="36" height="36">ClipForge</a>
                 <div class="nav-links">
-                    <a href="index.html">Home</a>
+                    <a href="index.html" aria-current="page">Home</a>
+                    <a href="tiktok.html">TikTok Integration</a>
                     <a href="privacy.html">Privacy</a>
                     <a href="terms.html">Terms</a>
                     <a href="contact.html">Contact</a>
@@ -21,28 +45,134 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <div class="container">
             <div class="hero">
+                <img class="hero-icon" src="assets/icons/icon-512.png" alt="ClipForge app icon" width="128" height="128">
                 <h1>Create and Publish Short-Form Videos</h1>
-                <p>ClipForge helps you automate your short-form video workflow. Connect your own social media accounts to upload and schedule content seamlessly across major platforms.</p>
-                <a href="contact.html" class="btn">Get in Touch</a>
+                <p>ClipForge helps you automate your short-form video workflow. It turns one idea into a finished short video, then lets you upload or schedule it on your own YouTube, Instagram and TikTok accounts. Nothing is published until you choose to publish it.</p>
+                <a href="#how-it-works" class="btn">See How It Works</a>
             </div>
 
             <div class="features">
                 <div class="feature-card">
-                    <h3>Automated Publishing</h3>
-                    <p>Upload and schedule your video content, titles, descriptions, and hashtags exactly when you want them to go live.</p>
+                    <h3>From Idea to Video</h3>
+                    <p>Start from a single question or idea. ClipForge writes a compact script, plans the visuals, captions and music, and renders a finished short video (vertical 9:16 by default) that you can refine in plain language.</p>
                 </div>
                 <div class="feature-card">
                     <h3>Supported Platforms</h3>
-                    <p>Connect and publish to popular networks including YouTube, Instagram, and TikTok, all from one place.</p>
+                    <p>Connect and publish to popular networks including YouTube, Instagram, and TikTok, all from one place, using each platform's official API and sign-in.</p>
                 </div>
                 <div class="feature-card">
                     <h3>You're in Control</h3>
                     <p>ClipForge does not claim ownership of your connected accounts. Users retain full control over what gets published and when.</p>
                 </div>
             </div>
+
+            <section class="section" id="what-it-is" aria-labelledby="what-it-is-title">
+                <h2 id="what-it-is-title">What ClipForge Is</h2>
+                <p class="section-intro">ClipForge is a desktop application for macOS. It runs on your own computer, and its interface opens in your web browser. It combines two jobs that usually need separate tools: producing a short informational video, and publishing that video to the social accounts you connect.</p>
+            </section>
+
+            <section class="section" id="how-it-works" aria-labelledby="how-it-works-title">
+                <h2 id="how-it-works-title">How Video Creation Works</h2>
+                <p class="section-intro">Every video starts as a project. Each change is saved as a new revision, so earlier versions are never lost.</p>
+                <ol class="steps">
+                    <li>
+                        <h3>Start with one idea</h3>
+                        <p>Type a question or idea in plain language, or pick one of ClipForge's topic suggestions. Your original prompt is kept unchanged with the project.</p>
+                    </li>
+                    <li>
+                        <h3>ClipForge plans the video</h3>
+                        <p>It decides whether research is needed, keeps only the essential information, writes a compact script, estimates the natural duration, and builds a storyboard of visual beats with captions, music and a timeline.</p>
+                    </li>
+                    <li>
+                        <h3>Refine it in chat</h3>
+                        <p>Ask for changes in your own words. ClipForge applies the change as a new revision, and you can undo it at any time.</p>
+                    </li>
+                    <li>
+                        <h3>Render the final video</h3>
+                        <p>ClipForge renders a finished MP4 with narration, captions timed to the spoken words, and music. You can save it locally or publish it.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="section" id="publishing" aria-labelledby="publishing-title">
+                <h2 id="publishing-title">How Social Publishing Works</h2>
+                <p class="section-intro">Publishing always starts with you. Every platform receives the same final video file, and you review each platform's settings before anything is sent.</p>
+                <ol class="steps">
+                    <li>
+                        <h3>Connect your own accounts</h3>
+                        <p>In ClipForge's settings, you connect the YouTube, Instagram or TikTok accounts you manage. Each connection uses the platform's official sign-in (OAuth): you log in on the platform's own page and approve the permissions there. ClipForge never sees your password.</p>
+                    </li>
+                    <li>
+                        <h3>Open the Upload sheet</h3>
+                        <p>After a video is rendered, choose <strong>Upload</strong> and pick the account. ClipForge shows only the settings that platform supports, such as the caption, visibility and interaction options.</p>
+                    </li>
+                    <li>
+                        <h3>Review and confirm</h3>
+                        <p>You edit the caption and hashtags, choose who can see the post, and answer the required disclosures. The upload button stays disabled until every required choice is made.</p>
+                    </li>
+                    <li>
+                        <h3>Publish now or schedule</h3>
+                        <p>Publish immediately, or pick a date, time and time zone. YouTube schedules natively. For Instagram and TikTok, ClipForge sends the post when it is due, but only while ClipForge is running with internet access. A post whose time passes while your computer is off is marked <strong>Missed</strong> and waits for you to publish, reschedule or cancel it.</p>
+                    </li>
+                    <li>
+                        <h3>Follow the result</h3>
+                        <p>ClipForge shows each post's status (for example scheduled, uploading, processing, published or failed) with the platform's own reason when something fails. Removing a video from ClipForge's library never deletes the post on the platform.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="section" id="platforms" aria-labelledby="platforms-title">
+                <h2 id="platforms-title">Supported Platforms</h2>
+                <p class="section-intro">ClipForge requests only the permissions it needs to publish your videos and to show which account is connected.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Platform</th>
+                                <th scope="col">What ClipForge does</th>
+                                <th scope="col">Sign-in and permissions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Platform"><strong>TikTok</strong></td>
+                                <td data-label="What ClipForge does">Posts your video with the caption, visibility, interaction settings and disclosures you choose. <a href="tiktok.html">Details</a></td>
+                                <td data-label="Sign-in and permissions">TikTok Login Kit and Content Posting API (Direct Post): <code>user.info.basic</code>, <code>video.publish</code></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Platform"><strong>YouTube</strong></td>
+                                <td data-label="What ClipForge does">Uploads your video with title, description, tags, thumbnail, audience and visibility settings, optionally scheduled, and reads analytics for videos uploaded through ClipForge.</td>
+                                <td data-label="Sign-in and permissions">Google OAuth: <code>youtube</code>, <code>yt-analytics.readonly</code></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Platform"><strong>Instagram</strong></td>
+                                <td data-label="What ClipForge does">Publishes your video as a Reel with your caption. Requires an Instagram professional (Business or Creator) account linked to a Facebook Page you manage.</td>
+                                <td data-label="Sign-in and permissions">Facebook Login for Business: <code>instagram_basic</code>, <code>instagram_content_publish</code>, <code>pages_show_list</code>, <code>pages_read_engagement</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="section" id="control" aria-labelledby="control-title">
+                <h2 id="control-title">You Stay in Control</h2>
+                <ul class="check-list">
+                    <li><strong>No automatic posting without you.</strong> ClipForge does not post any content without your direct instruction or a schedule you created.</li>
+                    <li><strong>Your own accounts only.</strong> ClipForge publishes only to accounts you connected yourself, and you choose the account for every post.</li>
+                    <li><strong>Credentials stay protected.</strong> Access tokens are kept in your computer's secure credential storage and are never shown in the interface or written to logs.</li>
+                    <li><strong>Disconnect any time.</strong> You can disconnect an account in ClipForge's settings or revoke access in the platform's own security settings.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="access" aria-labelledby="access-title">
+                <div class="notice">
+                    <h2 id="access-title">Access</h2>
+                    <p>ClipForge is not offered as a public download or self-service sign-up on this website. If you have questions about ClipForge or would like to ask about access, please <a href="contact.html">contact us</a>.</p>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -51,8 +181,10 @@
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
+                <a href="tiktok.html">TikTok Integration</a>
                 <a href="contact.html">Contact</a>
             </div>
+            <p class="footer-note">ClipForge is an independent application and is not affiliated with, endorsed by or sponsored by TikTok, Meta, Instagram, Google or YouTube. Platform names are trademarks of their respective owners.</p>
             <p>&copy; 2026 ClipForge. All rights reserved.</p>
         </div>
     </footer>
