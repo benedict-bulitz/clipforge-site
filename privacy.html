@@ -73,8 +73,26 @@
             <p>We take the privacy of your data seriously:</p>
             <ul>
                 <li><strong>No Sale of Data:</strong> We do not sell your personal data, tokens, or content to third parties.</li>
-                <li><strong>Data Retention:</strong> Information is retained only as long as necessary for the application's operation. When you remove a scheduled post or disconnect an account, the associated data is removed from our active systems.</li>
                 <li><strong>User Control:</strong> You can revoke ClipForge's access at any time by disconnecting your account within our application or through the respective platform's security settings.</li>
+            </ul>
+
+            <h3>Where Information Is Stored</h3>
+            <p>ClipForge runs on the computer where it is installed. Connected-account details, publishing records and projects are stored in ClipForge's database on that computer. Access tokens are stored in the operating system's secure credential storage (for example, the macOS Keychain), not in that database, and are never shown in the interface or written to logs.</p>
+
+            <h3 id="disconnecting">Disconnecting an Account</h3>
+            <ul>
+                <li><strong>Credentials:</strong> ClipForge deletes the account's stored access credentials from the computer and asks the platform to revoke ClipForge's access. If the platform cannot be reached, the stored credentials are still deleted. For Instagram, ClipForge asks Meta to revoke access only when no other connected Instagram account uses the same Facebook sign-in.</li>
+                <li><strong>Account record and history:</strong> ClipForge keeps the account's identity record (account ID, display name, handle and profile picture URL), marked as disconnected, together with the history of posts made to that account, because publishing and analytics records refer to it. Connecting the same account again reuses this record.</li>
+                <li><strong>Scheduled posts:</strong> Disconnecting does not cancel Instagram or TikTok posts already scheduled for that account. They are not published while the account is disconnected: if their time arrives while it is disconnected, they are marked as failed (or as missed, if ClipForge was not running). If you reconnect the account before then, they remain scheduled. Cancel them in ClipForge if you no longer want them published. YouTube videos scheduled through ClipForge are uploaded to YouTube right away as private videos with a publish time, so YouTube publishes them at that time even after you disconnect. You can change or delete them in YouTube Studio.</li>
+            </ul>
+
+            <h3 id="retention">Cancelling Posts, Removing Videos and Deleting Projects</h3>
+            <ul>
+                <li><strong>Cancelling a scheduled post:</strong> Cancelling an Instagram or TikTok post that has not started uploading stops it from being published. ClipForge keeps the cancelled post's record, including its caption and settings, in its history.</li>
+                <li><strong>Removing a video from the library:</strong> This hides the video in ClipForge's library and removes its preview image. If it is an Instagram or TikTok post that has not started uploading, it is also cancelled. The publication record is kept.</li>
+                <li><strong>Deleting a project:</strong> This removes the project's local media and project data. If the project's video was successfully uploaded to YouTube, ClipForge keeps a compact record of that upload (the upload details, a description of how the video was produced, and YouTube analytics snapshots). Records of Instagram and TikTok posts are also kept after the project is deleted.</li>
+                <li><strong>Posts on the platforms:</strong> ClipForge never deletes posts on YouTube, Instagram or TikTok. To remove a post, delete it on the platform.</li>
+                <li><strong>Retained records:</strong> The records described above are not deleted automatically after a set period.</li>
             </ul>
 
             <h2>Third-Party Services</h2>
