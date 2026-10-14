@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Integration - ClipForge</title>
+    <meta name="description" content="How ClipForge uses TikTok Login Kit and the Content Posting API: the permissions you grant, the choices you make before every post, and how to disconnect.">
+    <link rel="canonical" href="https://benedict-bulitz.github.io/clipforge-site/tiktok.html">
+    <link rel="icon" href="favicon.ico?v=1b6115bd" sizes="16x16 32x32 48x48">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png?v=1b6115bd">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png?v=1b6115bd">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48x48.png?v=1b6115bd">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=1b6115bd">
+    <link rel="manifest" href="site.webmanifest?v=1b6115bd">
+    <meta name="theme-color" content="#0f1115">
+    <meta name="application-name" content="ClipForge">
+    <meta name="apple-mobile-web-app-title" content="ClipForge">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ClipForge">
+    <meta property="og:title" content="TikTok Integration - ClipForge">
+    <meta property="og:description" content="How ClipForge connects to TikTok, which permissions it requests, and how you control every post.">
+    <meta property="og:url" content="https://benedict-bulitz.github.io/clipforge-site/tiktok.html">
+    <meta property="og:image" content="https://benedict-bulitz.github.io/clipforge-site/assets/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The ClipForge app icon">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+        <div class="container">
+            <nav aria-label="Main">
+                <a href="index.html" class="brand"><img src="assets/icons/icon-192.png" alt="" width="36" height="36">ClipForge</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="tiktok.html" aria-current="page">TikTok Integration</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <h1>TikTok Integration</h1>
+            <p class="section-intro">ClipForge uses TikTok's official <strong>Login Kit</strong> and <strong>Content Posting API</strong> (Direct Post) so that you can post a video you made in ClipForge to your own TikTok account. This page explains exactly how the connection works, which permissions you grant, and what you decide before every post.</p>
+
+            <section class="section" id="connect" aria-labelledby="connect-title">
+                <h2 id="connect-title">Connecting Your TikTok Account</h2>
+                <ol class="steps">
+                    <li>
+                        <h3>Choose Connect TikTok</h3>
+                        <p>In ClipForge, open <strong>Settings &rarr; Integrations &rarr; TikTok</strong> and choose to connect an account.</p>
+                    </li>
+                    <li>
+                        <h3>Sign in on TikTok</h3>
+                        <p>ClipForge opens TikTok's own authorization page. You log in there; ClipForge never sees or stores your TikTok password. The request is protected with PKCE, a standard safeguard for OAuth sign-in from desktop applications.</p>
+                    </li>
+                    <li>
+                        <h3>Review the permissions</h3>
+                        <p>TikTok shows you the permissions ClipForge asks for (listed below). You can approve or cancel.</p>
+                    </li>
+                    <li>
+                        <h3>Return to ClipForge</h3>
+                        <p>After you approve, TikTok returns you to ClipForge, which shows the connected account's display name and profile picture so you always know which account you are posting to. The access credentials are kept in your computer's secure credential storage and are never shown in the interface or written to logs.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="section" id="permissions" aria-labelledby="permissions-title">
+                <h2 id="permissions-title">Permissions ClipForge Requests</h2>
+                <p class="section-intro">ClipForge requests exactly two TikTok permissions (scopes).</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Scope</th>
+                                <th scope="col">What it allows</th>
+                                <th scope="col">Why ClipForge needs it</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Scope"><code>user.info.basic</code></td>
+                                <td data-label="What it allows">Read your account's basic profile: open ID, union ID, display name and profile picture (avatar).</td>
+                                <td data-label="Why ClipForge needs it">To identify the connected account and show you which TikTok account a post will go to.</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Scope"><code>video.publish</code></td>
+                                <td data-label="What it allows">Post a video directly to your TikTok profile, and read the posting options TikTok offers your account (privacy choices, comment/Duet/Stitch settings, maximum video length).</td>
+                                <td data-label="Why ClipForge needs it">To post the video you chose, with the settings you chose, and to offer only the options TikTok allows for your account.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="section-intro after-table">ClipForge does not request access to your TikTok video list, followers, messages, comments or analytics.</p>
+            </section>
+
+            <section class="section" id="before-posting" aria-labelledby="before-posting-title">
+                <h2 id="before-posting-title">What You Decide Before Every TikTok Post</h2>
+                <p class="section-intro">Each time you choose <strong>Upload</strong> for TikTok, ClipForge asks TikTok for your account's current posting options and builds the post form from them. The upload button stays disabled until every required choice is made.</p>
+                <ul class="check-list">
+                    <li><strong>Account:</strong> you pick which connected TikTok account to post to.</li>
+                    <li><strong>Caption and hashtags:</strong> suggested from the video's metadata and fully editable, with a live character count.</li>
+                    <li><strong>Who can view this video:</strong> chosen from the options TikTok returns for your account. There is no preselected default; you must choose one.</li>
+                    <li><strong>Allow comments, Duet and Stitch:</strong> each is off until you turn it on, and is unavailable if you have turned it off in your TikTok settings.</li>
+                    <li><strong>AI-generated content:</strong> you answer whether the video should carry TikTok's AI-generated content label.</li>
+                    <li><strong>Commercial content:</strong> you can disclose that the video promotes your own brand or is branded content (a paid partnership). Branded content cannot be posted with "Only me" visibility.</li>
+                    <li><strong>When:</strong> publish now, or schedule a date and time. Scheduled posts are sent by ClipForge only while it is running with internet access; a missed time is never published late on its own.</li>
+                    <li><strong>Confirmation:</strong> you must confirm "By posting, you agree to TikTok's Music Usage Confirmation." before posting.</li>
+                </ul>
+                <p class="section-intro">ClipForge also checks the video against the maximum length TikTok allows for your account and tells you if it is too long.</p>
+            </section>
+
+            <section class="section" id="after-posting" aria-labelledby="after-posting-title">
+                <h2 id="after-posting-title">After You Post</h2>
+                <ul class="check-list">
+                    <li>ClipForge uploads the final video file to TikTok and shows the post's status: uploading, processing, published or failed.</li>
+                    <li>TikTok may need a few minutes to process a video before it appears on your profile.</li>
+                    <li>If TikTok rejects a post, ClipForge shows TikTok's own reason and does not retry errors that need your action, such as missing permissions.</li>
+                    <li>ClipForge never deletes your TikTok posts.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="audit" aria-labelledby="audit-title">
+                <div class="notice">
+                    <h2 id="audit-title">Visibility Before TikTok's Audit</h2>
+                    <p>Until ClipForge's use of the Content Posting API has passed TikTok's audit, TikTok only allows posts with "Only me" (private) visibility. ClipForge never silently changes the visibility you choose: if a public option is not yet allowed, it is shown as unavailable and you choose "Only me" yourself.</p>
+                </div>
+            </section>
+
+            <section class="section" id="disconnect" aria-labelledby="disconnect-title">
+                <h2 id="disconnect-title">Disconnecting TikTok</h2>
+                <ul class="check-list">
+                    <li><strong>In ClipForge:</strong> disconnect the account in <strong>Settings &rarr; Integrations</strong>. ClipForge asks TikTok to revoke its access and deletes the stored TikTok credential from your computer.</li>
+                    <li><strong>In TikTok:</strong> you can also remove ClipForge's access at any time in your TikTok account's security and app-permission settings.</li>
+                </ul>
+                <p class="section-intro">For how ClipForge handles your information, see the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>. Questions: <a href="contact.html">contact us</a>.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="tiktok.html">TikTok Integration</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="footer-note">ClipForge is an independent application and is not affiliated with, endorsed by or sponsored by TikTok, Meta, Instagram, Google or YouTube. Platform names are trademarks of their respective owners.</p>
+            <p>&copy; 2026 ClipForge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
